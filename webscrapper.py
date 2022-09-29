@@ -7,5 +7,7 @@ driver = webdriver.Chrome()
 driver.implicitly_wait(30)
 driver.maximize_window()
 
+baseURL = "https://ca.indeed.com/?r=us"
+
 # Navigate to the application home page
-driver.get("https://ca.indeed.com/?r=us")
+driver.get(baseURL)
