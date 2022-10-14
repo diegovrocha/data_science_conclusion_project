@@ -23,7 +23,7 @@ def get_jobs(term):
         }
         term = term.replace(" ", "+")
 
-        url = site
+        url = f"https://dd.angel.co/js/"
         response = requests.post(url, headers=headers)
         html_doc = response.text
         soup = BeautifulSoup(html_doc, "html.parser")
