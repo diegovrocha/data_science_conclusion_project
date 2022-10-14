@@ -1,13 +1,10 @@
-from bs4 import BeautifulSoup
 import requests
+from bs4 import BeautifulSoup
 import pandas as pd
 import utils
-import worker_jobspresso
-import worker_flexjobs
-import worker_weworkremotely
 
 
-def get_remoteok_jobs(term):
+def get_jobs(term):
     headers = {
         'User-Agent': utils.get_user_agent()
     }
@@ -34,21 +31,9 @@ if __name__ == "__main__":
     roles = ['data analyst', 'data engineers',
              'machine learning engineer', 'data scientist', 'data architect']
 
-    job_list = []
     for role in roles:
-        job_list = worker_weworkremotely.get_jobs(role)
-        utils.write_csv(job_list)
-
-        job_list = worker_flexjobs.get_jobs(role)
-        utils.write_csv(job_list)
-
-        job_list = worker_jobspresso.get_jobs(role)
-        utils.write_csv(job_list)
-
-        '''
+        job_list = get_jobs(role)
         df = pd.DataFrame(job_list)
+        utils.write_csv(job_list)
         print(df)
-        write_csv(job_list)
-        '''
 
-    # test_site('https://remoteok.com/?tags=java&action=get_jobs&offset=20')

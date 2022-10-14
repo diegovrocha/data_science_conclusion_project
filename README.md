@@ -1,11 +1,7 @@
-# Data Science conclusion project
+# Data Science
 
-Final project of specialization in Data Science
+Projeto de conclusão de especialização em Data Science
 
 ## Installation
 
-It's necessary install chromedriver, can be downaloaded in site below:
-
-[https://chromedriver.chromium.org/downloads](https://chromedriver.chromium.org/downloads)
-
-It's also necessery to put chromedriver in /usr/local/bin to work.
+Instalar as dependencias do arquivo requirements.txt [requiremets.txt]
