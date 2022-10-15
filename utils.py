@@ -36,23 +36,7 @@ def test_site(site):
     try:
         url = site
         headers = {
-                ':authority':'remoteok.com',
-                ':method': 'GET',
-                ':path': '/?tags=java&action=get_jobs&offset=20',
-                ':scheme':'https',
-                'accept': '*/*',
-                'Accept-Encoding':'gzip, deflate, br',
-                'Accept-Language':'en-US,en;q=0.9,pt;q=0.8',
-                'cookie':'ref=https%3A%2F%2Fremoteok.com%2F; new_user=false; adShuffler=1; visits=7; visit_count=7',
-                'referer':'https://remoteok.com/remote-java-jobs',
-                'sec-ch-ua': '"Chromium";v="106", "Google Chrome";v="106", "Not;A=Brand";v="99"',
-                'sec-ch-ua-mobile':'?0',
-                'sec-ch-ua-platform':'"macOS"',
-                'sec-fetch-dest':'empty',
-		        'sec-fetch-mode':'cors',
-                'sec-fetch-site': 'same-origin',
-                'user-agent': get_user_agent(),
-                'x-requested-with': 'XMLHttpRequest'                
+                'user-agent': get_user_agent()
         }
 
         response = requests.get(url, headers)

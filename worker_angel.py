@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import utils
+from http import HTTPStatus
 
 
 def get_jobs(term):
@@ -55,8 +56,7 @@ def get_jobs(term):
                     jobs.append(job)
         '''
 
-        main_dir = os.path.dirname(os.path.realpath(__file__))
-        arquivo = main_dir + '/html/' + site.split('/')[2] + '.html'
+        arquivo = utils.MAIN_DIR + '/html/' + url.split('/')[2] + '.html'
         with open(arquivo, 'w') as file:
             file.write(str(soup))
 
@@ -64,7 +64,7 @@ def get_jobs(term):
             raise Exception(
                 f'Erro ao acessar o site {url}, retorno {response.status_code}-{HTTPStatus(response.status_code).phrase}')
 
-        df = pd.DataFrame(jobs)
+        #df = pd.DataFrame(jobs)
         print(df)
     except Exception as error:
         print('Ocorreu um erro: ' + error.args[0])

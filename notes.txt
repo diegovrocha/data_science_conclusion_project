@@ -9,8 +9,3 @@ Angel   -> Datadome
     https://angel.co/
 
     - É feita uma técnica de ofuscação de dados no class 
-
-
-
-
-https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=7721g4evltohzo&redirect_uri=https://example.com/auth/linkedin/callback&state=BlaBla&scope=w_member_social,r_liteprofile
