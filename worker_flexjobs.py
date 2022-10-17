@@ -27,10 +27,10 @@ def get_jobs(term):
             if title != 'None':
                 job = {
                     "site": "flexjobs.com",
-                    "title": title,
+                    "title": title.strip(),
                     "company": "no info",
                     "salary": "no info",
-                    "summary": summary,
+                    "summary": summary.strip(),
                     "link": link
                 }
                 job_list.append(job)

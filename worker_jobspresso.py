@@ -99,13 +99,15 @@ def get_jobs(term):
         for item_job in job_listing_description:
             job_summary += item_job.text + " "
         
+        job_summary = job_summary.replace('Overview', '')
+
         if title != 'None':
             job = {
                     "site": "jobspresso.com",
-                    "title": title,
-                    "company": company,
+                    "title": title.strip(),
+                    "company": company.strip(),
                     "salary": "no info",
-                    "summary": job_summary,
+                    "summary": job_summary.strip(),
                     "link": link
                 }
             job_list.append(job)

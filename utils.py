@@ -11,9 +11,9 @@ CSV_PATH = MAIN_DIR + '/jobs.csv'
 def write_csv(job_list):
     isExist = os.path.exists(CSV_PATH)
 
-    with open(CSV_PATH, "a") as file:
+    with open(CSV_PATH, "a", encoding="utf-8") as file:
         writer = csv.DictWriter(
-            file, fieldnames=['site', 'title', 'company', 'salary', 'summary', 'link'])
+            file, fieldnames=['site', 'title', 'company', 'salary', 'summary', 'link'], delimiter=';')
 
         if not isExist:
             writer.writeheader()

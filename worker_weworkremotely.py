@@ -27,8 +27,8 @@ def get_jobs(term):
             if title != 'None':
                 job = {
                     "site": "weworkremotely.com",
-                    "title": title,
-                    "company": company,
+                    "title": title.strip(),
+                    "company": company.strip(),
                     "salary": "no info",
                     "summary": "no info",
                     "link": link
